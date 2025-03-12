@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/adrickmalekian/Desktop/CSC486 Final/venv/bin/python3.12" "$0" "$@"
-' '''
+#!/home/spenc/calPoly/class/csc486/CSC486-Final/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/adrickmalekian/Desktop/CSC486 Final/venv"
+set -gx VIRTUAL_ENV "/home/spenc/calPoly/class/csc486/CSC486-Final/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

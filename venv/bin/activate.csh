@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/adrickmalekian/Desktop/CSC486 Final/venv"
+setenv VIRTUAL_ENV "/home/spenc/calPoly/class/csc486/CSC486-Final/venv"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
