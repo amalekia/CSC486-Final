@@ -54,28 +54,26 @@ public class Publisher implements AutoCloseable, Runnable {
 	public void run() {
 		//String csvFile = "/Users/sammorrisroe/Desktop/CSC486_MQTT/csv-subscriber-tcptestmosquittoorg1883/s-1.msg.csv";
 
-		try {
-			List<String> csvLines = CSVReaderPublisher.readCSV(csvFile);
+      try {
+         List<String> csvLines = Files.readAllLines(Paths.get(csvFile));
 
-			System.out.println("Publishing messages from CSV...");
+         System.out.println("Publishing messages from CSV...");
 
+         // Publish each line with a 1-second delay
+         int lineCounter = 0;
+         for (String line : csvLines) {
+            // Add lines in csv to Repo ArrayList
+            lineCounter++;
+            Repository.getInstance().addData(String.valueOf(lineCounter), line);
+            this.publishMessage(line);
+            Thread.sleep(1000); // 1-second delay
+         }
 
-			// Publish each line with a 10-second delay
-			int lineCounter = 0;
-			for (String line : csvLines) {
-				// Add lines in csv to Repo ArrayList
-				lineCounter++;
-				Repository.getInstance().addData(String.valueOf(lineCounter), line);
-				this.publishMessage(line);
-			Thread.sleep(1000); // 10-second delay
-			}
+         Thread.sleep(1000); // 1-second delay
 
-			Thread.sleep(1000); // 10-second delay
-
-
-			System.out.println("Finished publishing all messages.");
-		} catch (MqttException | InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+         System.out.println("Finished publishing all messages.");
+      } catch (MqttException | InterruptedException | IOException e) {
+         e.printStackTrace();
+      }
+   }
 }
