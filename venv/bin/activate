@@ -1,5 +1,5 @@
 # This file must be used with "source bin/activate" *from bash*
-# You cannot run it directly
+# you cannot run it directly
 
 deactivate () {
     # reset old environment variables
@@ -14,10 +14,19 @@ deactivate () {
         unset _OLD_VIRTUAL_PYTHONHOME
     fi
 
+<<<<<<< HEAD
     # Call hash to forget past locations. Without forgetting
     # past locations the $PATH changes we made may not be respected.
     # See "man bash" for more details. hash is usually a builtin of your shell
     hash -r 2> /dev/null
+=======
+    # This should detect bash and zsh, which have a hash command that must
+    # be called to get it to forget past commands.  Without forgetting
+    # past commands the $PATH changes we made may not be respected
+    if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+        hash -r 2> /dev/null
+    fi
+>>>>>>> 04d7c2616cda8c47c8620aa9255a99bfca919a3f
 
     if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
         PS1="${_OLD_VIRTUAL_PS1:-}"
@@ -36,6 +45,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 # on Windows, a path can contain colons and backslashes and has to be converted:
 case "$(uname)" in
     CYGWIN*|MSYS*|MINGW*)
@@ -49,6 +59,10 @@ case "$(uname)" in
         export VIRTUAL_ENV=/Users/spenc/class/486/CSC486-Final/venv
         ;;
 esac
+=======
+VIRTUAL_ENV="/Users/sammorrisroe/PycharmProjects/CSC486-Final/venv"
+export VIRTUAL_ENV
+>>>>>>> 04d7c2616cda8c47c8620aa9255a99bfca919a3f
 
 _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/"bin":$PATH"
@@ -71,6 +85,9 @@ if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     export PS1
 fi
 
-# Call hash to forget past commands. Without forgetting
+# This should detect bash and zsh, which have a hash command that must
+# be called to get it to forget past commands.  Without forgetting
 # past commands the $PATH changes we made may not be respected
-hash -r 2> /dev/null
+if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+    hash -r 2> /dev/null
+fi

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/Users/spenc/class/486/CSC486-Final/venv/bin/python3.13
+=======
+#!/Users/sammorrisroe/PycharmProjects/CSC486-Final/venv/bin/python3
+>>>>>>> 04d7c2616cda8c47c8620aa9255a99bfca919a3f
 # -*- coding: utf-8 -*-
 import re
 import sys
