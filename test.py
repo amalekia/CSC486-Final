@@ -1,6 +1,6 @@
 import json
 
-def read_attributes(file_path):
+def read_attributes(file_path = 'pad.json'):
     """
     Reads a JSON file and returns a dictionary containing the values
     of attributes P, A, and D.
