@@ -29,7 +29,7 @@ def read_attributes(file_path):
 # loop for 2 minutes and print out the values in the file every 10 seconds:
 import time
 for i in range(12):
-    print(read_attributes('attributes.json'))
+    print(read_attributes('pad.json'))
     time.sleep(10)
 
 

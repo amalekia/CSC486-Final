@@ -2,7 +2,6 @@ from texasholdem.game.game import TexasHoldEm
 from texasholdem.gui.text_gui import TextGUI
 from texasholdem.game.action_type  import ActionType
 from texasholdem.game.player_state import PlayerState
-<<<<<<< HEAD
 # from texasholdem.game.card import Card
 from typing import Tuple
 import time
@@ -134,7 +133,6 @@ def csc486_agent(game: TexasHoldEm) -> Tuple[ActionType, int]:
             return ActionType.FOLD, None
 
 
->>>>>>> 04d7c2616cda8c47c8620aa9255a99bfca919a3f
 def get_outs_and_draw_type(hand, board):
     """
     Determines the number of outs and type of draw (if any).
@@ -201,10 +199,5 @@ while game.is_game_running():
             gui.run_step()
             time.sleep(1)
 
-<<<<<<< HEAD
     path = game.export_history('./pgns')     # save history
     gui.replay_history(path)    
-=======
-    path = game.export_history('./pgns')  # save history
-    gui.replay_history(path)
->>>>>>> 04d7c2616cda8c47c8620aa9255a99bfca919a3f
