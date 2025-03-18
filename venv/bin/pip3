@@ -1,4 +1,4 @@
-#!/home/spenc/calPoly/class/csc486/CSC486-Final/venv/bin/python
+#!/Users/spenc/class/486/CSC486-Final/venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys
